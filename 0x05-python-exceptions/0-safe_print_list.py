@@ -8,6 +8,8 @@ def safe_print_list(my_list=[], x=0):
             index +=1
     except IndexError:
         print()
-    print("")
-    return index
+        return index
+    else:
+        print()
+        return index
 
