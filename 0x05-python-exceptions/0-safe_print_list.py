@@ -4,10 +4,10 @@ def safe_print_list(my_list=[], x=0):
     index = 0;
     try:
         for i in range(x):
-            print(my_list[i], end=" ")
+            print(my_list[i], end='')
             index +=1
     except Exception as error:
-        break
+        print(error)
     print("")
     return index
 
