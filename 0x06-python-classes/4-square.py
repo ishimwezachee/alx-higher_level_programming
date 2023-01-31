@@ -1,42 +1,46 @@
 #!/usr/bin/python3
-"""Define a square class"""
+"""Defines a class Square"""
 
 
 class Square:
-    """Represent a Square"""
-    
+    """Represents a square
+    Attributes:
+        __size (int): size of a side of the square
+    """
     def __init__(self, size=0):
-        """Initialize a new square.
-
+        """initializes the square
         Args:
-              size (int): the size of the new square"""
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an interger")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+            size (int): size of a side of the square
+        Returns:
+            None
+        """
+        self.size = size
 
     def area(self):
-        """return the current area of a square"""
-        return(self.__size * self.__size)
+        """calculates the square's area
+        Returns:
+            The area of the square
+        """
+        return (self.__size) ** 2
+
     @property
     def size(self):
         """getter of __size
         Returns:
-        thesize of the square
+            The size of the square
         """
         return self.__size
+
     @size.setter
-    def size(self,value):
-        """ setter of __size
+    def size(self, value):
+        """setter of __size
         Args:
-        value(int): the sive of a a size of the square
+            value (int): the size of a size of the square
         Returns:
-        None
+            None
         """
         if type(value) is not int:
-            raise TypeError("size must be an interger")
+            raise TypeError("size must be an integer")
         else:
             if value < 0:
                 raise ValueError("size must be >= 0")
